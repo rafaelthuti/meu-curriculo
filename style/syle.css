@@ -1,0 +1,145 @@
+/* ========== 1. RESET BÁSICO ========== */
+/* Aqui vamos remover as margens e paddings padrões do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== 2. ESTILOS GLOBAIS ========== */
+/* Configurações que valem para toda a página */
+body {
+  font-family: "Segoe UI", 'Times New Roman', Times, serif, Geneva, Verdana, sans-serif;
+  background-color: #fffffff6;
+  color: #fafafaec;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========== 3. CABEÇALHO ========== */
+/* Estilo do topo da página com nome e título */
+header {
+  background-color: #250233;
+  color: hsl(320, 100%, 57%);
+  text-align: left;
+  padding: 40px 20px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
+  }
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  }
+
+/* ========== 4. FOTO DE PERFIL ========== */
+/* Container da foto */
+.foto-perfil {
+  position: relative;
+  width: 150px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+/* A foto em si */
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 25%; /* Faz a foto ficar redonda */
+  object-fit: cover; /* Garante que não distorça */
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: 0 4px 10px rgba(18, 1, 255, 0.3);
+  transition: all 0.3s ease; /* Suaviza as animações */
+}
+
+/* Efeito quando passa o mouse na foto */
+.foto:hover {
+  transform: scale(1.1); /* Aumenta 10% */
+  border-color: hsl(320, 100%, 57%); /* Borda rosa */
+  box-shadow: 0 10px 25px rgba(244, 241, 241, 0.654);
+}
+
+/* Moldura animada ao redor da foto */
+.foto-perfil::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px dashed hsl(320, 100%, 57%);
+  border-radius: 25%;
+  animation: girar 10s linear infinite; /* Chama a animação */
+  pointer-events: none; /* Não atrapalha cliques */
+}
+
+/* ========== 5. SEÇÕES ========== */
+/* Estilo geral das seções (Sobre, Experiência, etc) */
+section {
+  background-color: #250233;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(252, 5, 5, 0.1);
+}
+
+/* Título das seções (h2) */
+section h2 {
+  color: #d21382a5;
+  border-bottom: 2px solid #d21382a5;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Subtítulos dentro das seções (h3) */
+section h3 {
+  color: #d2138277;
+  margin: 15px 0 5px 0;
+}
+
+/* ========== 6. LISTAS ========== */
+/* Listas em geral */
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* Itens da lista */
+li {
+  margin-bottom: 8px;
+}
+
+/* Estilo especial para a ÚLTIMA seção (Contato) */
+section:last-of-type li {
+  display: inline-block; /* Itens lado a lado */
+  background-color: #ecf0f1;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px; /* Arredondado tipo pílula */
+  font-size: 0.9em;
+}
+
+/* ========== 7. RODAPÉ ========== */
+/* NOVO: Estilo do rodapé */
+footer {
+  background-color: #bb0c0c00; /* Mesma cor do cabeçalho */
+  color: rgba(255, 255, 255, 0.979);
+  text-align: center; /* Centraliza o texto */
+  padding: 30px 20px;
+  border-radius: 0 0 8px 8px; /* Arredonda só embaixo */
+  margin-top: 20px; /* Espaço acima do rodapé */
+}
+
+/* Texto do rodapé */
+footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+/* Efeito hover no rodapé (opcional) */
+footer:hover {
+  background-color: #9b9b9b00; /* Cor um pouco mais clara */
+  transition: 0.3s;
+}
